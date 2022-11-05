@@ -12,7 +12,7 @@
         <meta name="author" content="Krahets">
       
       
-        <link rel="canonical" href="https://krahets.github.io/dsa-021/chapter_data_structure/computer_memory/">
+        <link rel="canonical" href="https://krahets.github.io/dsa-021/chapter_data_structure/data_and_memory/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
@@ -550,7 +550,7 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    计算机中的数据
+    基本数据类型
   </a>
   
 </li>
@@ -719,6 +719,52 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../chapter_license/">License</a>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="License" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          License
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -747,7 +793,7 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    计算机中的数据
+    基本数据类型
   </a>
   
 </li>
@@ -773,19 +819,105 @@
                 
                   
 
-  <a href="https://github.com/krahets/dsa-021/edit/master/docs/chapter_data_structure/computer_memory.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/krahets/dsa-021/edit/master/docs/chapter_data_structure/data_and_memory.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 <h1 id="_1">数据与内存<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">计算机中的数据<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>TODO</p>
+<h2 id="_2">基本数据类型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>谈到计算机中的数据，我们能够想到文本、图片、视频、语音、3D 模型等等，这些数据虽然组织形式不同，但是有一个共同点，即都是由各种基本数据类型构成的。</p>
+<p><strong>「基本数据类型」是 CPU 可以直接进行运算的类型，在算法中直接被使用。</strong></p>
+<ul>
+<li>「整数」根据不同的长度分为 byte, short, int, long ，根据算法需求选用，即在满足取值范围的情况下尽量减小内存空间占用。</li>
+<li>「浮点数」代表小数，根据长度分为 float, double ，同样根据算法的实际需求选用。</li>
+<li>「字符」在计算机中是以字符集的形式保存的，char 的值实际上是数字，代表字符集中的编号，计算机通过字符集查表来完成编号到字符的转换。</li>
+<li>「布尔」代表逻辑中的 ”是“ 与 ”否“ ，其占用空间需要具体根据编程语言确定，通常为 1 byte 或 1 bit 。</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">字节与比特</p>
+<p>1 字节 (byte) = 8 比特 (bit) ， 1 比特即最基本的 1 个二进制位</p>
+</div>
+<p>Table. Java 的基本数据类型</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>符号</th>
+<th>占用空间</th>
+<th>取值范围</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>整数</td>
+<td>byte</td>
+<td>1 byte</td>
+<td><span class="arithmatex">\(-2^7\)</span> ~ <span class="arithmatex">\(2^7 - 1\)</span> ( <span class="arithmatex">\(-128\)</span> ~ <span class="arithmatex">\(127\)</span> )</td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td>short</td>
+<td>2 bytes</td>
+<td><span class="arithmatex">\(-2^{15}\)</span> ~ <span class="arithmatex">\(2^{15} - 1\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td><strong>int</strong></td>
+<td>4 bytes</td>
+<td><span class="arithmatex">\(-2^{31}\)</span> ~ <span class="arithmatex">\(2^{31} - 1\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td>long</td>
+<td>8 bytes</td>
+<td><span class="arithmatex">\(-2^{63}\)</span> ~ <span class="arithmatex">\(2^{63} - 1\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td>浮点数</td>
+<td><strong>float</strong></td>
+<td>4 bytes</td>
+<td><span class="arithmatex">\(-3.4 \times 10^{38}\)</span> ~ <span class="arithmatex">\(3.4 \times 10^{38}\)</span></td>
+<td><span class="arithmatex">\(0.0\)</span> f</td>
+</tr>
+<tr>
+<td></td>
+<td>double</td>
+<td>8 bytes</td>
+<td><span class="arithmatex">\(-1.7 \times 10^{308}\)</span> ~ <span class="arithmatex">\(1.7 \times 10^{308}\)</span></td>
+<td><span class="arithmatex">\(0.0\)</span></td>
+</tr>
+<tr>
+<td>字符</td>
+<td><strong>char</strong></td>
+<td>2 bytes</td>
+<td><span class="arithmatex">\(0\)</span> ~ <span class="arithmatex">\(2^{16} - 1\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td>布尔</td>
+<td><strong>boolean</strong></td>
+<td>1 byte (or 1 bit)</td>
+<td><span class="arithmatex">\(\text{true}\)</span> 或 <span class="arithmatex">\(\text{false}\)</span></td>
+<td><span class="arithmatex">\(\text{false}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>以上表格中，加粗项在「算法题」中最为常用。此表格无需硬背，大致理解即可，需要时可以通过查表来回忆。</p>
+</div>
 <h2 id="_3">计算机内存<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>在计算机中，内存和硬盘是两种主要的存储硬件设备。「硬盘」主要用于长期存储数据，容量较大（通常可达到 TB 级别）、速度较慢。「内存」用于运行程序时暂存数据，速度更快，但容量较小（通常为 GB 级别）。</p>
-<p>算法运行中的相关数据都被存储在内存中，<strong>而系统通过「内存地址 Memory Location」来访问目标内存位置的数据。</strong> 下图是一个常见的计算机内存条，其中每一个黑色方块内都包含一块内存空间。我们可以将内存想象成一个巨大的 Excel 表格，其中每个单元格都可以存储 1 byte 的数据。计算机系统按照某种方法，给表格中每个单元格编号，保证每块内存空间都有独立的内存地址。自此，程序便通过这些地址，访问内存中的数据。</p>
-<p><img alt="computer_memory_location" src="../computer_memory.assets/computer_memory_location.png" /></p>
+<p><strong>算法运行中，相关数据都被存储在内存中。</strong> 下图展示了一个计算机内存条，其中每个黑色方块都包含一块内存空间。我们可以将内存想象成一个巨大的 Excel 表格，其中每个单元格都可以存储 1 byte 的数据，在算法运行时，所有数据都被存储在这些单元格中。</p>
+<p><strong>系统通过「内存地址 Memory Location」来访问目标内存位置的数据。</strong> 计算机根据特定规则给表格中每个单元格编号，保证每块内存空间都有独立的内存地址。自此，程序便通过这些地址，访问内存中的数据。</p>
+<p><img alt="computer_memory_location" src="../data_and_memory.assets/computer_memory_location.png" /></p>
 <p style="text-align:center"> Fig. 内存条、内存空间、内存地址 </p>
 
 <p><strong>内存资源是设计数据结构与算法的重要考虑因素。</strong> 内存是所有程序的公共资源，当内存被某程序占用时，不能被其它程序同时使用。我们需要根据剩余内存资源的情况来设计算法。例如，若剩余内存空间有限，则要求算法占用的峰值内存不能超过系统剩余内存；若运行的程序很多、缺少大块连续的内存空间，则要求选取的数据结构必须能够存储在离散的内存空间内。</p>

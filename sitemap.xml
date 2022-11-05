@@ -76,7 +76,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://krahets.github.io/dsa-021/chapter_data_structure/computer_memory/</loc>
+         <loc>https://krahets.github.io/dsa-021/chapter_data_structure/data_and_memory/</loc>
          <lastmod>2022-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -87,6 +87,11 @@
     </url>
     <url>
          <loc>https://krahets.github.io/dsa-021/chapter_introduction/</loc>
+         <lastmod>2022-11-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://krahets.github.io/dsa-021/chapter_license/</loc>
          <lastmod>2022-11-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
