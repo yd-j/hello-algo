@@ -19,7 +19,7 @@
     
     
       
-        <title>空间复杂度 - 数据结构与算法 - 从零之一</title>
+        <title>空间复杂度 - 数据结构与算法：从零至一</title>
       
     
     
@@ -88,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="数据结构与算法 - 从零之一" class="md-header__button md-logo" aria-label="数据结构与算法 - 从零之一" data-md-component="logo">
+    <a href="../.." title="数据结构与算法：从零至一" class="md-header__button md-logo" aria-label="数据结构与算法：从零至一" data-md-component="logo">
       
   <img src="../../assets/images/favicon.png" alt="logo">
 
@@ -100,7 +100,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            数据结构与算法 - 从零之一
+            数据结构与算法：从零至一
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -213,12 +213,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="数据结构与算法 - 从零之一" class="md-nav__button md-logo" aria-label="数据结构与算法 - 从零之一" data-md-component="logo">
+    <a href="../.." title="数据结构与算法：从零至一" class="md-nav__button md-logo" aria-label="数据结构与算法：从零至一" data-md-component="logo">
       
   <img src="../../assets/images/favicon.png" alt="logo">
 
     </a>
-    数据结构与算法 - 从零之一
+    数据结构与算法：从零至一
   </label>
   
     <div class="md-nav__source">
@@ -349,6 +349,8 @@
         
           
             
+          
+        
           
         
           
@@ -514,6 +516,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../space_time_tradeoff/" class="md-nav__link">
+        权衡时间与空间
+      </a>
     </li>
   
 
@@ -864,23 +880,23 @@
 <h2 id="_2">算法相关空间<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>算法运行中，使用的内存空间主要有以下几种：</p>
 <ul>
-<li>「输入空间」用于存储输入数据；</li>
-<li>「暂存空间」用于存储算法运行中的中间变量和对象等数据；</li>
-<li>「输出空间」用于存储输出数据；</li>
+<li>「输入空间」用于存储算法的输入数据；</li>
+<li>「暂存空间」用于存储算法运行中的变量、对象、函数上下文等数据；</li>
+<li>「输出空间」用于存储算法的输出数据；</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>通常情况下，空间复杂度计入的「暂存空间」+「输出空间」的大小。</p>
+<p>通常情况下，空间复杂度统计范围是「暂存空间」+「输出空间」。</p>
 </div>
-<p>（图）</p>
+<p>暂存空间可分为三个部分：</p>
+<ul>
+<li>「暂存数据」用于保存算法运行中的各种 <strong>常量、变量、对象</strong> 等。</li>
+<li>「栈帧空间」用于保存调用函数的上下文数据。系统每次调用函数都会在栈的顶部创建一个栈帧，函数返回时，栈帧空间会被释放。</li>
+<li>「指令空间」用于保存编译后的程序指令，<strong>在实际统计中一般忽略不计</strong>。</li>
+</ul>
+<p><img alt="space_types" src="../space_complexity.assets/space_types.png" /></p>
 <p style="text-align:center"> Fig. 算法使用的相关空间 </p>
 
-<p>暂存空间可分为指令空间、数据空间、栈帧空间。</p>
-<ul>
-<li>「指令空间」用于保存编译后的程序指令，<strong>在实际统计中一般忽略不计</strong>。</li>
-<li>「数据空间」用于保存算法运行中的各种 <strong>常量、变量、对象</strong> 等。</li>
-<li>「栈帧空间」用于保存调用函数的上下文数据。系统每次调用函数都会在栈的顶部创建一个栈帧，函数返回时，栈帧空间会被释放。</li>
-</ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Java</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -895,10 +911,13 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// 常量</span><span class="w"></span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">             </span><span class="c1">// 变量</span><span class="w"></span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">Node</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 对象</span><span class="w"></span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">function</span><span class="p">();</span><span class="w">              </span><span class="c1">// 调用函数</span><span class="w"></span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kt">int</span><span class="w"> </span><span class="nf">algorithm</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">        </span><span class="c1">// 输入数据</span><span class="w"></span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">          </span><span class="c1">// 暂存数据（常量）</span><span class="w"></span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">                </span><span class="c1">// 暂存数据（变量）</span><span class="w"></span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Node</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// 暂存数据（对象）</span><span class="w"></span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">function</span><span class="p">();</span><span class="w">       </span><span class="c1">// 栈帧空间（调用函数）</span><span class="w"></span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">         </span><span class="c1">// 输出数据</span><span class="w"></span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </div>
 </div>
@@ -1188,13 +1207,13 @@ O(1) &lt; O(\log n) &lt; O(n) &lt; O(n^2) &lt; O(2^n) \newline
       
       
         
-        <a href="../summary/" class="md-footer__link md-footer__link--next" aria-label="Next: 小结" rel="next">
+        <a href="../space_time_tradeoff/" class="md-footer__link md-footer__link--next" aria-label="Next: 权衡时间与空间" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              小结
+              权衡时间与空间
             </div>
           </div>
           <div class="md-footer__button md-icon">
