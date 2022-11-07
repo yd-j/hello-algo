@@ -1116,7 +1116,10 @@
 <p><strong>时间复杂度分析将统计「计算操作的运行时间」简化为统计「计算操作的数量」。</strong> 这是因为，无论是运行平台、还是计算操作类型，都与算法运行时间的增长趋势无关。因此，我们可以简单地将所有计算操作的执行时间统一看作是相同的 “单位时间” 。</p>
 <p><strong>时间复杂度也存在一定的局限性。</strong> 比如，虽然算法 <code>A</code> 和 <code>C</code> 的时间复杂度相同，但是实际的运行时间有非常大的差别。再比如，虽然算法 <code>B</code> 比 <code>C</code> 的时间复杂度要更高，但在输入数据大小 <span class="arithmatex">\(n\)</span> 比较小时，算法 <code>B</code> 是要明显优于算法 <code>C</code> 的。即使存在这些问题，计算复杂度仍然是评判算法效率的最有效、最常用方法。</p>
 <h2 id="_4">函数渐进上界<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>设算法「计算操作数量」为 <span class="arithmatex">\(T(n)\)</span>  ，其是一个关于输入数据大小 <span class="arithmatex">\(n\)</span> 的函数。例如，以下算法的操作数量为 <span class="arithmatex">\(T(n) = 3 + 2n\)</span> ，这是个一次函数，因此时间复杂度是线性阶。</p>
+<p>设算法「计算操作数量」为 <span class="arithmatex">\(T(n)\)</span>  ，其是一个关于输入数据大小 <span class="arithmatex">\(n\)</span> 的函数。例如，以下算法的操作数量为
+$$
+T(n) = 3 + 2n
+$$</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Java</label><label for="__tabbed_3_2">C++</label><label for="__tabbed_3_3">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1141,7 +1144,9 @@
 </div>
 </div>
 </div>
-<p>我们将线性阶记为 <span class="arithmatex">\(O(n)\)</span> ，这个数学符号被称为「大 <span class="arithmatex">\(O\)</span> 记号 Big-<span class="arithmatex">\(O\)</span> Notation」。时间复杂度的全称是「渐进时间复杂度」，体现着其是一个渐进概念。我们用大 <span class="arithmatex">\(O\)</span> 记号来表示函数 <span class="arithmatex">\(T(n)\)</span> 的「渐进上界 asymptotic upper bound」。</p>
+<p><span class="arithmatex">\(T(n)\)</span> 是个一次函数，说明时间增长趋势是线性的，因此易得时间复杂度是线性阶。</p>
+<p>我们将线性阶的时间复杂度记为 <span class="arithmatex">\(O(n)\)</span> ，这个数学符号被称为「大 <span class="arithmatex">\(O\)</span> 记号 Big-<span class="arithmatex">\(O\)</span> Notation」，代表函数 <span class="arithmatex">\(T(n)\)</span> 的「渐进上界 asymptotic upper bound」。</p>
+<p>我们要推算时间复杂度，本质上是在计算「操作数量函数 <span class="arithmatex">\(T(n)\)</span> 」的渐进上界。下面我们先来看看函数渐进上界的数学定义。 </p>
 <div class="admonition abstract">
 <p class="admonition-title">函数渐进上界</p>
 <p>若存在正实数 <span class="arithmatex">\(c\)</span> 和实数 <span class="arithmatex">\(n_0\)</span> ，使得对于所有的 <span class="arithmatex">\(n &gt; n_0\)</span> ，均有
@@ -1151,23 +1156,34 @@ $$
 则可认为 <span class="arithmatex">\(f(n)\)</span> 给出了 <span class="arithmatex">\(T(n)\)</span> 的一个渐进上界，记为 
 $$
 T(n) = O(f(n))
-$$
-其含义是 <strong>当 <span class="arithmatex">\(n\)</span> 趋于正无穷时，<span class="arithmatex">\(T(n)\)</span> 和 <span class="arithmatex">\(f(n)\)</span> 处于相同的增长级别</strong> 。</p>
+$$</p>
 </div>
-<p>（图）</p>
+<p><img alt="asymptotic_upper_bound" src="../time_complexity.assets/asymptotic_upper_bound.png" /></p>
 <p style="text-align:center"> Fig. 函数的渐进上界 </p>
 
-<p>「渐进上界」数学味儿很重，如果你感觉没有完全理解，请不要担心，在实际使用中我们只需要会推算即可，数学意义可以慢慢领悟。</p>
+<p>本质上看，计算渐进上界就是在找一个函数 <span class="arithmatex">\(f(n)\)</span> ，<strong>使得在 <span class="arithmatex">\(n\)</span> 趋向于无穷大时，<span class="arithmatex">\(T(n)\)</span> 和 <span class="arithmatex">\(f(n)\)</span> 处于相同的增长级别（仅相差一个常数项 <span class="arithmatex">\(c\)</span> 的倍数）</strong>。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>渐进上界的数学味儿有点重，如果你感觉没有完全理解，无需担心，因为在实际使用中我们只需要会推算即可，数学意义可以慢慢领悟。</p>
+</div>
 <h2 id="_5">推算方法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>推算时间复杂度分为两步，首先「统计操作数量」，然后「判断渐进上界」。</p>
+<p>推算出 <span class="arithmatex">\(f(n)\)</span> 后，我们就得到时间复杂度 <span class="arithmatex">\(O(f(n))\)</span> 。那么，如何来确定渐进上界 <span class="arithmatex">\(f(n)\)</span> 呢？总体分为两步，首先「统计操作数量」，然后「判断渐进上界」。</p>
 <h3 id="1">1. 统计操作数量<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>对着代码，从上到下一行一行地计数即可。分享几条提高效率的技巧：</p>
+<p>对着代码，从上到下一行一行地计数即可。然而，<strong>由于上述 <span class="arithmatex">\(c \cdot f(n)\)</span> 中的常数项 <span class="arithmatex">\(c\)</span> 可以取任意大小，因此操作数量 <span class="arithmatex">\(T(n)\)</span> 中的各种系数、常数项都可以被忽略</strong>。根据此原则，可以总结出以下计数偷懒技巧：</p>
 <ol>
 <li><strong>跳过数量与 <span class="arithmatex">\(n\)</span> 无关的操作。</strong> 因为他们都是 <span class="arithmatex">\(T(n)\)</span> 中的常数项，对时间复杂度不产生影响。</li>
 <li><strong>省略所有系数。</strong> 例如，循环 <span class="arithmatex">\(2n\)</span> 次、<span class="arithmatex">\(5n + 1\)</span> 次、……，都可以化简记为 <span class="arithmatex">\(n\)</span> 次，因为 <span class="arithmatex">\(n\)</span> 前面的系数对时间复杂度也不产生影响。</li>
-<li><strong>循环嵌套时使用乘法。</strong> 总操作数量等于外层循环和内层循环操作数量之积。</li>
+<li><strong>循环嵌套时使用乘法。</strong> 总操作数量等于外层循环和内层循环操作数量之积，每一层循环依然可以分别套用上述 <code>1.</code> 和 <code>2.</code> 技巧。</li>
 </ol>
-<p>根据以下示例，完整统计时 <span class="arithmatex">\(T(n) = 2n^2 + (5n + 1) + 2\)</span> ，使用技巧后 <span class="arithmatex">\(T(n) = n^2 + n\)</span> ，最终都能得出时间复杂度为 <span class="arithmatex">\(O(n^2)\)</span> 。</p>
+<p>根据以下示例，使用上述技巧前、后的统计结果分别为
+$$
+\begin{aligned}
+T(n) &amp; = 2n(n + 1) + (5n + 1) + 2 &amp; \text{完整统计 (-.-|||)} \newline
+&amp; = 2n^2 + 7n + 3 \newline
+T(n) &amp; = n^2 + n &amp; \text{偷懒统计 (o.O)}
+\end{aligned}
+$$
+最终，两者都能推出相同的时间复杂度结果，即 <span class="arithmatex">\(O(n^2)\)</span> 。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Java</label><label for="__tabbed_4_2">C++</label><label for="__tabbed_4_3">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1180,7 +1196,7 @@ $$
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="c1">// +n*n（技巧 3）</span><span class="w"></span>
 <a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
 <a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
@@ -1599,8 +1615,8 @@ n! = n \times (n - 1) \times (n - 2) \times \cdots \times 2 \times 1
 <a id="__codelineno-45-25" name="__codelineno-45-25" href="#__codelineno-45-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-45-26" name="__codelineno-45-26" href="#__codelineno-45-26"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-45-27" name="__codelineno-45-27" href="#__codelineno-45-27"></a>
-<a id="__codelineno-45-28" name="__codelineno-45-28" href="#__codelineno-45-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-45-29" name="__codelineno-45-29" href="#__codelineno-45-29"></a><span class="w">        </span><span class="cm">/* Driver Code */</span><span class="w"></span>
+<a id="__codelineno-45-28" name="__codelineno-45-28" href="#__codelineno-45-28"></a><span class="w">    </span><span class="cm">/* Driver Code */</span><span class="w"></span>
+<a id="__codelineno-45-29" name="__codelineno-45-29" href="#__codelineno-45-29"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-45-30" name="__codelineno-45-30" href="#__codelineno-45-30"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-45-31" name="__codelineno-45-31" href="#__codelineno-45-31"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-45-32" name="__codelineno-45-32" href="#__codelineno-45-32"></a><span class="w">            </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">randomNumbers</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"></span>
