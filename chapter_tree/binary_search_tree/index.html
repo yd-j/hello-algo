@@ -12,21 +12,21 @@
         <meta name="author" content="Krahets">
       
       
-        <link rel="canonical" href="https://krahets.github.io/hello-algo/chapter_data_structure/">
+        <link rel="canonical" href="https://krahets.github.io/hello-algo/chapter_tree/binary_search_tree/">
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
-        <title>数据结构简介 - Hello 算法</title>
+        <title>二叉搜索树 - Hello 算法</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -43,9 +43,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -88,9 +88,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Hello 算法" class="md-header__button md-logo" aria-label="Hello 算法" data-md-component="logo">
+    <a href="../.." title="Hello 算法" class="md-header__button md-logo" aria-label="Hello 算法" data-md-component="logo">
       
-  <img src="../assets/images/favicon.png" alt="logo">
+  <img src="../../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              数据结构简介
+              二叉搜索树
             
           </span>
         </div>
@@ -213,9 +213,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Hello 算法" class="md-nav__button md-logo" aria-label="Hello 算法" data-md-component="logo">
+    <a href="../.." title="Hello 算法" class="md-nav__button md-logo" aria-label="Hello 算法" data-md-component="logo">
       
-  <img src="../assets/images/favicon.png" alt="logo">
+  <img src="../../assets/images/favicon.png" alt="logo">
 
     </a>
     Hello 算法
@@ -260,7 +260,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../chapter_about/">关于本书</a>
+          <a href="../../chapter_about/">关于本书</a>
           
         </div>
       
@@ -304,7 +304,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../chapter_introduction/">算法无处不在</a>
+          <a href="../../chapter_introduction/">算法无处不在</a>
           
         </div>
       
@@ -358,7 +358,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../chapter_computational_complexity/">计算复杂度</a>
+          <a href="../../chapter_computational_complexity/">计算复杂度</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -381,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_computational_complexity/performance_evaluation/" class="md-nav__link">
+      <a href="../../chapter_computational_complexity/performance_evaluation/" class="md-nav__link">
         算法效率评估
       </a>
     </li>
@@ -395,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_computational_complexity/time_complexity/" class="md-nav__link">
+      <a href="../../chapter_computational_complexity/time_complexity/" class="md-nav__link">
         时间复杂度
       </a>
     </li>
@@ -409,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_computational_complexity/space_complexity/" class="md-nav__link">
+      <a href="../../chapter_computational_complexity/space_complexity/" class="md-nav__link">
         空间复杂度
       </a>
     </li>
@@ -423,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_computational_complexity/space_time_tradeoff/" class="md-nav__link">
+      <a href="../../chapter_computational_complexity/space_time_tradeoff/" class="md-nav__link">
         权衡时间与空间
       </a>
     </li>
@@ -437,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_computational_complexity/summary/" class="md-nav__link">
+      <a href="../../chapter_computational_complexity/summary/" class="md-nav__link">
         小结
       </a>
     </li>
@@ -457,14 +457,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -483,8 +481,8 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">数据结构简介</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../chapter_data_structure/">数据结构简介</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -507,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="data_and_memory/" class="md-nav__link">
+      <a href="../../chapter_data_structure/data_and_memory/" class="md-nav__link">
         数据与内存
       </a>
     </li>
@@ -521,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classification_of_data_strcuture/" class="md-nav__link">
+      <a href="../../chapter_data_structure/classification_of_data_strcuture/" class="md-nav__link">
         数据结构分类
       </a>
     </li>
@@ -535,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="summary/" class="md-nav__link">
+      <a href="../../chapter_data_structure/summary/" class="md-nav__link">
         小结
       </a>
     </li>
@@ -582,7 +580,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../chapter_array_and_linkedlist/">数组与链表</a>
+          <a href="../../chapter_array_and_linkedlist/">数组与链表</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -605,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_array_and_linkedlist/array/" class="md-nav__link">
+      <a href="../../chapter_array_and_linkedlist/array/" class="md-nav__link">
         数组
       </a>
     </li>
@@ -619,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_array_and_linkedlist/linked_list/" class="md-nav__link">
+      <a href="../../chapter_array_and_linkedlist/linked_list/" class="md-nav__link">
         链表
       </a>
     </li>
@@ -633,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_array_and_linkedlist/list/" class="md-nav__link">
+      <a href="../../chapter_array_and_linkedlist/list/" class="md-nav__link">
         列表
       </a>
     </li>
@@ -647,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_array_and_linkedlist/summary/" class="md-nav__link">
+      <a href="../../chapter_array_and_linkedlist/summary/" class="md-nav__link">
         小结
       </a>
     </li>
@@ -694,7 +692,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../chapter_stack_and_queue/">栈与队列</a>
+          <a href="../../chapter_stack_and_queue/">栈与队列</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -717,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_stack_and_queue/stack/" class="md-nav__link">
+      <a href="../../chapter_stack_and_queue/stack/" class="md-nav__link">
         栈
       </a>
     </li>
@@ -731,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_stack_and_queue/queue/" class="md-nav__link">
+      <a href="../../chapter_stack_and_queue/queue/" class="md-nav__link">
         队列
       </a>
     </li>
@@ -745,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_stack_and_queue/deque/" class="md-nav__link">
+      <a href="../../chapter_stack_and_queue/deque/" class="md-nav__link">
         双向队列
       </a>
     </li>
@@ -759,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_stack_and_queue/summary/" class="md-nav__link">
+      <a href="../../chapter_stack_and_queue/summary/" class="md-nav__link">
         小结
       </a>
     </li>
@@ -779,12 +777,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -808,7 +808,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../chapter_tree/">树</a>
+          <a href="../">树</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -831,7 +831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_tree/binary_tree/" class="md-nav__link">
+      <a href="../binary_tree/" class="md-nav__link">
         二叉树
       </a>
     </li>
@@ -845,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_tree/perfect_complete_full_binary_tree/" class="md-nav__link">
+      <a href="../perfect_complete_full_binary_tree/" class="md-nav__link">
         满二叉树
       </a>
     </li>
@@ -857,11 +857,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../chapter_tree/binary_search_tree/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         二叉搜索树
       </a>
+      
     </li>
   
 
@@ -873,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_tree/balanced_binary_tree/" class="md-nav__link">
+      <a href="../balanced_binary_tree/" class="md-nav__link">
         平衡二叉树
       </a>
     </li>
@@ -887,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_tree/summary/" class="md-nav__link">
+      <a href="../summary/" class="md-nav__link">
         小结
       </a>
     </li>
@@ -926,7 +936,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../chapter_license/">License</a>
+          <a href="../../chapter_license/">License</a>
           
         </div>
       
@@ -977,14 +987,16 @@
                 
                   
 
-  <a href="https://github.com/krahets/hello-algo/edit/master/docs/chapter_data_structure/index.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/krahets/hello-algo/edit/master/docs/chapter_tree/binary_search_tree.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">数据结构简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>本章首先讨论了什么是数据，并介绍了数据在内存中的存储方式与访问方法。随后，介绍了两种数据结构的分类维度，即物理结构和逻辑结构。</p>
+<h1 id="_1">二叉搜索树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p><strong>「二叉搜索树 Binary Search Tree」</strong> 中，对于任意结点，左子树中所有结点的值 <span class="arithmatex">\(&lt;\)</span> 该结点的值 <span class="arithmatex">\(&lt;\)</span> 该结点右子树中所有结点的值。</p>
+<p><img alt="binary_search_tree" src="../binary_search_tree.assets/binary_search_tree.png" /></p>
+<p style="text-align:center"> Fig. 二叉搜索树 </p>
 
 
 
@@ -1054,7 +1066,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../chapter_computational_complexity/summary/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 小结" rel="prev">
+        <a href="../perfect_complete_full_binary_tree/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 满二叉树" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1063,20 +1075,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              小结
+              满二叉树
             </div>
           </div>
         </a>
       
       
         
-        <a href="data_and_memory/" class="md-footer__link md-footer__link--next" aria-label="Next: 数据与内存" rel="next">
+        <a href="../balanced_binary_tree/" class="md-footer__link md-footer__link--next" aria-label="Next: 平衡二叉树" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              数据与内存
+              平衡二叉树
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1128,12 +1140,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
