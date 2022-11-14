@@ -894,35 +894,28 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    二叉搜索树优点
+    二叉搜索树的操作
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    二叉搜索树实现
-  </a>
-  
-    <nav class="md-nav" aria-label="二叉搜索树实现">
+    <nav class="md-nav" aria-label="二叉搜索树的操作">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     查找结点
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     插入结点
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     删除结点
   </a>
   
@@ -930,6 +923,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    二叉搜索树的优势
+  </a>
   
 </li>
       
@@ -942,7 +942,7 @@
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    二叉搜索树应用
+    二叉搜索树常见应用
   </a>
   
 </li>
@@ -1062,35 +1062,28 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    二叉搜索树优点
+    二叉搜索树的操作
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    二叉搜索树实现
-  </a>
-  
-    <nav class="md-nav" aria-label="二叉搜索树实现">
+    <nav class="md-nav" aria-label="二叉搜索树的操作">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     查找结点
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     插入结点
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     删除结点
   </a>
   
@@ -1098,6 +1091,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    二叉搜索树的优势
+  </a>
   
 </li>
       
@@ -1110,7 +1110,7 @@
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    二叉搜索树应用
+    二叉搜索树常见应用
   </a>
   
 </li>
@@ -1142,9 +1142,178 @@
 <li>任意结点的左子树和右子树也是二叉搜索树，即也满足条件 <code>1.</code> ；</li>
 </ol>
 <p><img alt="binary_search_tree" src="../binary_search_tree.assets/binary_search_tree.png" /></p>
-<p style="text-align:center"> Fig. 二叉搜索树 </p>
-
-<h2 id="_2">二叉搜索树优点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_2">二叉搜索树的操作<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">查找结点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>给定目标结点值 <code>num</code> ，可以根据二叉搜索树的性质来查找。我们声明一个结点 <code>cur</code> ，从二叉树的根结点 <code>root</code> 出发，循环比较结点值和 <code>num</code> 之间的大小关系</p>
+<ul>
+<li>若 <code>cur.val &lt; val</code> ，说明目标结点在 <code>cur</code> 的右子树中，因此执行 <code>cur = cur.right</code> ；</li>
+<li>若 <code>cur.val &gt; val</code> ，说明目标结点在 <code>cur</code> 的左子树中，因此执行 <code>cur = cur.left</code> ；</li>
+<li>若 <code>cur.val = val</code> ，说明找到目标结点，跳出循环并返回该结点即可；</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Step 1</label><label for="__tabbed_1_2">Step 2</label><label for="__tabbed_1_3">Step 3</label><label for="__tabbed_1_4">Step 4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="bst_search_1" src="../binary_search_tree.assets/bst_search_1.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="bst_search_2" src="../binary_search_tree.assets/bst_search_2.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="bst_search_3" src="../binary_search_tree.assets/bst_search_3.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="bst_search_4" src="../binary_search_tree.assets/bst_search_4.png" /></p>
+</div>
+</div>
+</div>
+<p>二叉搜索树的查找操作和二分查找算法如出一辙，也是在每轮排除一半情况。循环次数最多为二叉树的高度，当二叉树平衡时，使用 <span class="arithmatex">\(O(\log n)\)</span> 时间。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">binary_search_tree.java</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/* 查找结点 */</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">TreeNode</span><span class="w"> </span><span class="nf">search</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">TreeNode</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// 循环查找，越过叶结点后跳出</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="c1">// 目标结点在 root 的右子树中</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">right</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="c1">// 目标结点在 root 的左子树中</span><span class="w"></span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">left</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="c1">// 找到目标结点，跳出循环</span><span class="w"></span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="c1">// 返回目标结点</span><span class="w"></span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">cur</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="_4">插入结点<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>给定一个待插入元素 <code>num</code> ，为了保持二叉搜索树 “左子树 &lt; 根结点 &lt; 右子树” 的性质，插入操作分为两步：</p>
+<ol>
+<li>
+<p><strong>查找插入位置：</strong> 与查找操作类似，我们从根结点出发，根据当前节点值和 <code>num</code> 的大小关系循环向下搜索，直到越过叶结点（遍历到 <span class="arithmatex">\(\text{null}\)</span> ）时跳出循环；</p>
+</li>
+<li>
+<p><strong>在该位置插入结点：</strong> 初始化结点 <code>num</code> ，将该结点放到 <span class="arithmatex">\(\text{null}\)</span> 的位置 ；</p>
+</li>
+</ol>
+<p>二叉搜索树不允许存在重复节点，否则将会违背其定义。因此若待插入结点在树中已经存在，则不执行插入，直接返回即可。</p>
+<p><img alt="bst_insert" src="../binary_search_tree.assets/bst_insert.png" /></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">binary_search_tree.java</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/* 插入结点 */</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">TreeNode</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// 若树为空，直接提前返回</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">root</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">TreeNode</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">pre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="c1">// 循环查找，越过叶结点后跳出</span><span class="w"></span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="c1">// 找到重复结点，直接返回</span><span class="w"></span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="n">pre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span><span class="c1">// 插入位置在 root 的右子树中</span><span class="w"></span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">right</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="c1">// 插入位置在 root 的左子树中</span><span class="w"></span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">left</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="c1">// 插入结点 val</span><span class="w"></span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="n">TreeNode</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TreeNode</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pre</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="n">pre</span><span class="p">.</span><span class="na">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="n">pre</span><span class="p">.</span><span class="na">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">node</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">node</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>为了插入结点，需要借助 <strong>辅助结点 <code>prev</code></strong> 保存上一轮循环的结点，这样在遍历到 <span class="arithmatex">\(\text{null}\)</span> 时，我们也可以获取到其父结点，从而完成结点插入操作。</p>
+<p>与查找结点相同，插入结点使用 <span class="arithmatex">\(O(\log n)\)</span> 时间。</p>
+<h3 id="_5">删除结点<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>与插入结点一样，我们需要在删除操作后维持二叉搜索树的 “左子树 &lt; 根结点 &lt; 右子树” 的性质。首先，我们需要在二叉树中执行查找操作，获取待删除结点。接下来，根据待删除结点的子结点数量，删除操作需要分为三种情况：</p>
+<p><strong>待删除结点的子结点数量 <span class="arithmatex">\(= 0\)</span> 。</strong> 表明待删除结点是叶结点，直接删除即可。</p>
+<p><img alt="bst_remove_case1" src="../binary_search_tree.assets/bst_remove_case1.png" /></p>
+<p><strong>待删除结点的子结点数量 <span class="arithmatex">\(= 1\)</span> 。</strong> 将待删除结点替换为其子结点。</p>
+<p><img alt="bst_remove_case2" src="../binary_search_tree.assets/bst_remove_case2.png" /></p>
+<p><strong>待删除结点的子结点数量 <span class="arithmatex">\(= 2\)</span> 。</strong> 删除操作分为三步：</p>
+<ol>
+<li>找到待删除结点在 <strong>中序遍历序列</strong> 中的下一个结点，记为 <code>nex</code> ；</li>
+<li>使用 <code>nex</code> 替换待删除结点；</li>
+<li>在树中递归删除结点 <code>nex</code> ；</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Step 1</label><label for="__tabbed_4_2">Step 2</label><label for="__tabbed_4_3">Step 3</label><label for="__tabbed_4_4">Step 4</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="bst_remove_case3_1" src="../binary_search_tree.assets/bst_remove_case3_1.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="bst_remove_case3_2" src="../binary_search_tree.assets/bst_remove_case3_2.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="bst_remove_case3_3" src="../binary_search_tree.assets/bst_remove_case3_3.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="bst_remove_case3_4" src="../binary_search_tree.assets/bst_remove_case3_4.png" /></p>
+</div>
+</div>
+</div>
+<p>删除结点操作也使用 <span class="arithmatex">\(O(\log n)\)</span> 时间，其中查找待删除结点 <span class="arithmatex">\(O(\log n)\)</span> ，获取中序遍历后继结点 <span class="arithmatex">\(O(\log n)\)</span> 。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Java</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">binary_search_tree.java</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/* 删除结点 */</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">TreeNode</span><span class="w"> </span><span class="nf">remove</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="c1">// 若树为空，直接提前返回</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">root</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">TreeNode</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">,</span><span class="w"> </span><span class="n">pre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="c1">// 循环查找，越过叶结点后跳出</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="c1">// 找到待删除结点，跳出循环</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="n">pre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="c1">// 待删除结点在 root 的右子树中</span><span class="w"></span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">right</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="c1">// 待删除结点在 root 的左子树中</span><span class="w"></span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">left</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="c1">// 若无待删除结点，则直接返回</span><span class="w"></span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="c1">// 子结点数量 = 0 or 1</span><span class="w"></span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="na">left</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">right</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">        </span><span class="c1">// 当子结点数量 = 0 / 1 时， child = null / 该子结点</span><span class="w"></span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">        </span><span class="n">TreeNode</span><span class="w"> </span><span class="n">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">left</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">left</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="na">right</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="c1">// 删除结点 cur</span><span class="w"></span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pre</span><span class="p">.</span><span class="na">left</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">cur</span><span class="p">)</span><span class="w"> </span><span class="n">pre</span><span class="p">.</span><span class="na">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">child</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="n">pre</span><span class="p">.</span><span class="na">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">child</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">    </span><span class="c1">// 子结点数量 = 2</span><span class="w"></span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">        </span><span class="c1">// 获取中序遍历中 cur 的下一个结点</span><span class="w"></span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">        </span><span class="n">TreeNode</span><span class="w"> </span><span class="n">nex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="na">right</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nex</span><span class="p">.</span><span class="na">val</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">        </span><span class="c1">// 递归删除结点 nex</span><span class="w"></span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">        </span><span class="n">remove</span><span class="p">(</span><span class="n">nex</span><span class="p">.</span><span class="na">val</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">        </span><span class="c1">// 将 nex 的值复制给 cur</span><span class="w"></span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">        </span><span class="n">cur</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tmp</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">cur</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="cm">/* 获取最小结点 */</span><span class="w"></span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="n">TreeNode</span><span class="w"> </span><span class="nf">min</span><span class="p">(</span><span class="n">TreeNode</span><span class="w"> </span><span class="n">root</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">root</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">    </span><span class="c1">// 循环访问左子结点，直到叶结点时为最小结点，跳出</span><span class="w"></span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="na">left</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">        </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">.</span><span class="na">left</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="_6">二叉搜索树的优势<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>假设给定 <span class="arithmatex">\(n\)</span> 个数字，最常用的存储方式是「数组」，那么对于这串乱序的数字，常见操作的效率为：</p>
 <ul>
 <li><strong>查找元素：</strong> 由于数组是乱序的，因此需要遍历数组来确定，使用 <span class="arithmatex">\(O(n)\)</span> 时间；</li>
@@ -1152,7 +1321,7 @@
 <li><strong>删除元素：</strong> 需要先查找元素，删除后需要将该元素后的所有元素向前移动一位，使用 <span class="arithmatex">\(O(n)\)</span> 时间；</li>
 <li><strong>获取最小 / 最大元素：</strong> 需要遍历数组来确定，使用 <span class="arithmatex">\(O(1)\)</span> 时间；</li>
 </ul>
-<p>为了得到先验信息，我们也可以将数组元素进行排序，得到一个「排序数组」，此时操作效率为：</p>
+<p>为了得到先验信息，我们也可以预先将数组元素进行排序，得到一个「排序数组」，此时操作效率为：</p>
 <ul>
 <li><strong>查找元素：</strong> 由于数组已排序，可以使用二分查找，使用 <span class="arithmatex">\(O(\log n)\)</span> 时间；</li>
 <li><strong>插入元素：</strong> 为了保持数组是有序的，需插入到数组某位置，平均使用 <span class="arithmatex">\(O(n)\)</span> 时间；</li>
@@ -1166,7 +1335,7 @@
 <li><strong>删除元素：</strong> 平均使用 <span class="arithmatex">\(O(\log n)\)</span> 时间；</li>
 <li><strong>获取最小 / 最大元素：</strong> 平均使用 <span class="arithmatex">\(O(\log n)\)</span> 时间；</li>
 </ul>
-<p>根据以上分析，乱序数组和排序数组中的各类操作的时间复杂度是 “偏科” 的，有的快有的慢；<strong>而二叉搜索树的各项操作的时间复杂度都比较低，为对数阶，在 <span class="arithmatex">\(n\)</span> 很大时有优势</strong>。</p>
+<p>观察发现，乱序数组和排序数组中的各类操作的时间复杂度是 “偏科” 的，即有的快有的慢；<strong>而二叉搜索树的各项操作的时间复杂度都是对数阶，在数据量 <span class="arithmatex">\(n\)</span> 很大时有巨大优势</strong>。</p>
 <table>
 <thead>
 <tr>
@@ -1203,32 +1372,20 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_3">二叉搜索树实现<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>下面我们通过实现一个二叉搜索树，来剖析查找、插入、删除、获取最小 / 最大元素的操作流程。</p>
-<h3 id="_4">查找结点<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>给定目标结点值 <code>val</code> ，我们可以根据二叉搜索树的定义来查找：</p>
-<ul>
-<li>当结点值 &lt; <code>val</code> ，说明此节点在该结点的右子树中；</li>
-<li>当结点值 &gt; <code>val</code> ，说明此节点在该结点的左子树中；</li>
-<li>当结点值 = <code>val</code> ，找到此节点，返回即可；</li>
-</ul>
-<p>（图）</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">TreeNode</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">root</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">.</span><span class="na">right</span><span class="p">;</span><span class="w"> </span><span class="c1">// 目标结点在 root 的右子树中</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="na">val</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="p">.</span><span class="na">left</span><span class="p">;</span><span class="w">  </span><span class="c1">// 目标结点在 root 的左子树中</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="k">else</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w">             </span><span class="c1">// 找到目标结点，跳出并返回</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">root</span><span class="p">;</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<h3 id="_5">插入结点<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<h3 id="_6">删除结点<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <h2 id="_7">二叉搜索树的退化<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
-<h2 id="_8">二叉搜索树应用<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>二叉搜索树的理想状态是「完美二叉树」，我们称这样的二叉树是 “平衡” 的，此时可以在 <span class="arithmatex">\(\log n\)</span> 轮循环内查找任意结点。</p>
+<p>如果我们动态地在二叉搜索树中插入与删除结点，<strong>则可能导致二叉树退化为链表</strong>，此时各种操作的时间复杂度也退化之 <span class="arithmatex">\(O(n)\)</span> 。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在实际应用中，如何保持二叉搜索树的平衡，也是一个需要重要考虑的问题。</p>
+</div>
+<p><img alt="bst_degradation" src="../binary_search_tree.assets/bst_degradation.png" /></p>
+<h2 id="_8">二叉搜索树常见应用<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li>系统中的多级索引，高效查找、插入、删除操作。</li>
+<li>各种搜索算法的底层数据结构。</li>
+<li>存储数据流，保持其已排序。</li>
+</ul>
 
 
 
@@ -1288,6 +1445,8 @@
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
         </div>
         
       </main>
@@ -1372,7 +1531,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
