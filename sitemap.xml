@@ -2,152 +2,147 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://krahets.github.io/hello-algo/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_about/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_array_and_linkedlist/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_array_and_linkedlist/array/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_array_and_linkedlist/linked_list/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_array_and_linkedlist/list/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_array_and_linkedlist/summary/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_computational_complexity/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_computational_complexity/performance_evaluation/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_computational_complexity/space_complexity/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_computational_complexity/space_time_tradeoff/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_computational_complexity/summary/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_computational_complexity/time_complexity/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_data_structure/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_data_structure/classification_of_data_strcuture/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_data_structure/data_and_memory/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_data_structure/summary/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_introduction/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_license/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_stack_and_queue/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_stack_and_queue/deque/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_stack_and_queue/queue/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_stack_and_queue/stack/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_stack_and_queue/summary/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_tree/</loc>
-         <lastmod>2022-11-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://krahets.github.io/hello-algo/chapter_tree/balanced_binary_tree/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_tree/binary_search_tree/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_tree/binary_tree/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://krahets.github.io/hello-algo/chapter_tree/perfect_complete_full_binary_tree/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <loc>https://krahets.github.io/hello-algo/chapter_tree/binary_tree_types/</loc>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://krahets.github.io/hello-algo/chapter_tree/summary/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

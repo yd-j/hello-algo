@@ -12,14 +12,14 @@
         <meta name="author" content="Krahets">
       
       
-        <link rel="canonical" href="https://krahets.github.io/hello-algo/chapter_tree/balanced_binary_tree/">
+        <link rel="canonical" href="https://krahets.github.io/hello-algo/chapter_tree/binary_tree_types/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.6">
     
     
       
-        <title>平衡二叉树 - Hello 算法</title>
+        <title>二叉树常见类型 - Hello 算法</title>
       
     
     
@@ -90,7 +90,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Hello 算法" class="md-header__button md-logo" aria-label="Hello 算法" data-md-component="logo">
       
-  <img src="../../assets/images/favicon.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              平衡二叉树
+              二叉树常见类型
             
           </span>
         </div>
@@ -215,7 +215,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Hello 算法" class="md-nav__button md-logo" aria-label="Hello 算法" data-md-component="logo">
       
-  <img src="../../assets/images/favicon.png" alt="logo">
+  <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
     Hello 算法
@@ -801,8 +801,6 @@
         
           
         
-          
-        
       
       
         
@@ -843,11 +841,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../perfect_complete_full_binary_tree/" class="md-nav__link">
-        满二叉树
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          二叉树常见类型
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        二叉树常见类型
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    完美二叉树
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    完全二叉树
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    完满二叉树
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    平衡二叉树
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -862,30 +922,6 @@
       <a href="../binary_search_tree/" class="md-nav__link">
         二叉搜索树
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        平衡二叉树
-      </a>
-      
     </li>
   
 
@@ -975,6 +1011,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    完美二叉树
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    完全二叉树
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    完满二叉树
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    平衡二叉树
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -987,15 +1059,37 @@
                 
                   
 
-  <a href="https://github.com/krahets/hello-algo/edit/master/docs/chapter_tree/balanced_binary_tree.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/krahets/hello-algo/edit/master/docs/chapter_tree/binary_tree_types.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="_1">平衡二叉树<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="_1">常见二叉树类型<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">完美二叉树<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>「完美二叉树 Perfect Binary Tree」，其所有层的结点都被完全填满。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>在中文社区中，完美二叉树常被称为「满二叉树」，请注意与完满二叉树区分。</p>
+</div>
+<p><img alt="perfect_binary_tree" src="../binary_tree_types.assets/perfect_binary_tree.png" /></p>
+<p>完美二叉树的性质有：</p>
+<ul>
+<li>若树高度 <span class="arithmatex">\(= h\)</span> ，则结点总数 <span class="arithmatex">\(= 2^h\)</span> ；</li>
+</ul>
+<h2 id="_3">完全二叉树<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>「完全二叉树 Complete Binary Tree」只有最底层的结点未被填满，且最底层结点都尽量靠左填充。</p>
+<p><img alt="complete_binary_tree" src="../binary_tree_types.assets/complete_binary_tree.png" /></p>
+<p>完全二叉树有一个很好的性质，可以用「数组」来表示。</p>
+<ul>
+<li></li>
+</ul>
+<h2 id="_4">完满二叉树<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>「完满二叉树 Full Binary Tree」除了叶结点之外，其余所有结点都有两个子结点。</p>
+<p><img alt="full_binary_tree" src="../binary_tree_types.assets/full_binary_tree.png" /></p>
+<h2 id="_5">平衡二叉树<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p><strong>「平衡二叉树 Balanced Binary Tree」，又称「AVL 树」</strong> ，其任意结点的左子树和右子树的高度之差的绝对值 <span class="arithmatex">\(\leq 1\)</span> 。</p>
-<p><img alt="balanced_binary_tree" src="../balanced_binary_tree.assets/balanced_binary_tree.png" /></p>
+<p><img alt="balanced_binary_tree" src="../binary_tree_types.assets/balanced_binary_tree.png" /></p>
 
 
 
@@ -1067,7 +1161,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../binary_search_tree/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 二叉搜索树" rel="prev">
+        <a href="../binary_tree/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 二叉树" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1076,20 +1170,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              二叉搜索树
+              二叉树
             </div>
           </div>
         </a>
       
       
         
-        <a href="../summary/" class="md-footer__link md-footer__link--next" aria-label="Next: 小结" rel="next">
+        <a href="../binary_search_tree/" class="md-footer__link md-footer__link--next" aria-label="Next: 二叉搜索树" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              小结
+              二叉搜索树
             </div>
           </div>
           <div class="md-footer__button md-icon">
